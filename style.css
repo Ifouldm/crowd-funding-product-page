@@ -1,0 +1,171 @@
+:root {
+    --moderate-cyan: hsl(176, 50%, 47%);
+    --dark-cyan: hsl(176, 72%, 28%);
+    --dark-gray: hsl(0, 0%, 48%);
+    --light-gray: #f4f4f4;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Commissioner', sans-serif;
+    background-color: var(--light-gray);
+    background-image: url('./images/image-hero-desktop.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    max-width: 1440px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-image: url('./images/image-hero-mobile.jpg');
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    padding: 2rem 10%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 200px;
+}
+
+.navbarlinks {
+    display: flex;
+}
+
+.navbarlinks a {
+    color: white;
+    text-decoration: none;
+    margin: 1rem;
+}
+
+.block {
+    position: relative;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 0.4rem;
+    width: 50%;
+}
+
+.toplogo {
+    position: absolute;
+    top: -24px;
+    z-index: 100;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.row.space-around {
+    justify-content: space-around;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 500;
+    color: var(--moderate-cyan);
+}
+
+h4 {
+    color: var(--dark-gray);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+p {
+    line-height: 2;
+    color: var(--dark-gray);
+    font-weight: 500;
+}
+
+.block-segement {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    border: 0px;
+    border-radius: 3rem;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--moderate-cyan);
+    color: white;
+    font-weight: 500;
+}
+
+.button:hover {
+    background-color: var(--dark-cyan);
+    cursor: pointer;
+}
+
+.button.disabled {
+    background-color: var(--dark-gray);
+}
+
+.inner-block {
+    border: 2px solid var(--light-gray);
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.button.toggle {
+    padding: 0;
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+}
+
+.toggle-icon {
+    height: 32px;
+}
+
+.button.toggle.on {
+    color: var(--moderate-cyan);
+}
+
+.button.toggle.on .toggle-icon {
+    content: url('./images/icon-bookmark-on.svg');
+}
+
+.progress {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--light-gray);
+}
+
+.progress::after {
+    position: absolute;
+    content: "";
+    width: 89%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--moderate-cyan);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
