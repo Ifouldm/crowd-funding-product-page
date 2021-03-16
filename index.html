@@ -50,7 +50,7 @@
         A beautiful & handcrafted monitor stand to reduce neck and eye strain.
       </h4>
       <div class="row">
-        <button class="button">
+        <button class="button" id="backProject">
           Back this project
         </button>
         <button class="button toggle">
@@ -98,87 +98,167 @@
           you’ll be added to a special Backer member list.
         </h4>
         <div class="row">
-          <h1>101</h1>
-          <h4>left</h4>
-          <button class="button disabled">Select Reward</button>
+          <span class="word-group">
+            <h1>101</h1>
+            <h4>left</h4>
+          </span>
+          <button class="button">Select Reward</button>
         </div>
       </div>
-
       <div class="inner-block">
-        Black Edition Stand
-        Pledge $75 or more
-        You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
-        member list. Shipping is included.
-        64 left
-        Select Reward
+        <div class="row">
+          <h1>Black Edition Stand</h1>
+          <h2>Pledge $75 or more</h2>
+        </div>
+        <h4>
+          You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member
+          list. Shipping is included.
+        </h4>
+        <div class="row">
+          <span class="word-group">
+            <h1>64</h1>
+            <h4>left</h4>
+          </span>
+          <button class="button">Select Reward</button>
+        </div>
       </div>
-
-      <div class="inner-block">
-        Mahogany Special Edition
-        Pledge $200 or more
-        You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
-        to our Backer member list. Shipping is included.
-        0 left
-        Out of Stock
+      <div class="inner-block disabled">
+        <div class="row">
+          <h1>Mahogany Special Edition</h1>
+          <h2>Pledge $200 or more</h2>
+        </div>
+        <h4>
+          You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to
+          our Backer member list. Shipping is included.
+        </h4>
+        <div class="row">
+          <span class="word-group">
+            <h1>0</h1>
+            <h4>left</h4>
+          </span>
+          <button class="button disabled">Out of Stock</button>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Selection modal start -->
+  <!-- Selection modal -->
+  <div class="modal selection" id="selectionModal">
+    <div class="modal-content">
+      <h1 class="left">Back this project</h1>
+      <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
 
-  Back this project
-  Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
+      <div class="inner-block">
+        <div class="row">
+          <div class="radio"></div>
+          <div class="col">
+            <div class="row">
+              <h3>Pledge with no reward</h3>
+            </div>
+            <p>
+              Choose to support us without a reward if you simply believe in our project. As a backer,
+              you will be signed up to receive product updates via email.
+            </p>
+          </div>
+        </div>
+      </div>
 
-  Pledge with no reward
-  Choose to support us without a reward if you simply believe in our project. As a backer,
-  you will be signed up to receive product updates via email.
+      <div class="inner-block">
+        <div class="row">
+          <div class="radio"></div>
+          <div class="col">
+            <div class="row">
+              <h3>Bamboo Stand</h3>
+              <h2>Pledge $25 or more</h2>
+              <span class="word-group">
+                <h1>101</h1>
+                <h4>left</h4>
+              </span>
+            </div>
+            <p>
+              You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
+              you’ll be added to a special Backer member list.
+            </p>
+          </div>
+        </div>
+        <div class="pledge">
+          Enter your pledge
+          <span class="button value">$
+            <input type="number" class="value" min="25" max="10000" name="value" id="value" value="25">
+          </span>
+          <button class="button continue">Continue</button>
+        </div>
+      </div>
 
-  Bamboo Stand
-  Pledge $25 or more
-  You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
-  you’ll be added to a special Backer member list.
-  101 left
+      <div class="inner-block">
+        <div class="row">
+          <div class="radio"></div>
+          <div class="col">
+            <div class="row">
+              <h3>Black Edition Stand</h3>
+              <h2>Pledge $75 or more</h2>
+              <span class="word-group">
+                <h1>64</h1>
+                <h4>left</h4>
+              </span>
+            </div>
+            <p>
+              You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+              member list. Shipping is included.
+            </p>
+          </div>
+        </div>
+        <hr>
+        <div class="row pledge">
+          Enter your pledge
+          <span class="button value">$
+            <input type="number" class="value" min="75" max="10000" name="value" id="value" value="75">
+          </span>
+          <button class="button continue">Continue</button>
+        </div>
+      </div>
 
-  <!-- Selected pledge start -->
-  Enter your pledge
-  $25
-  Continue
-  <!-- Selected pledge end -->
-
-  Black Edition Stand
-  Pledge $75 or more
-  You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
-  member list. Shipping is included.
-  64 left
-
-  <!-- Selected pledge start -->
-  Enter your pledge
-  $75
-  Continue
-  <!-- Selected pledge end -->
-
-  Mahogany Special Edition
-  Pledge $200 or more
-  You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
-  to our Backer member list. Shipping is included.
-  0 left
-
-  <!-- Selected pledge  start -->
-  Enter your pledge
-  $200
-  Continue
-  <!-- Selected pledge end -->
-
-  <!-- Selection modal end -->
+      <div class="inner-block">
+        <div class="row">
+          <div class="radio"></div>
+          <div class="col">
+            <div class="row">
+              <h3>Mahogany Special Edition</h3>
+              <h2>Pledge $200 or more</h2>
+              <span class="word-group">
+                <h1>0</h1>
+                <h4>left</h4>
+              </span>
+            </div>
+            <p>
+              You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
+              to our Backer member list. Shipping is included.
+            </p>
+          </div>
+        </div>
+        <div class="pledge">
+          Enter your pledge
+          <span class="button value">$
+            <input type="number" class="value" min="200" max="10000" name="value" id="value" value="200">
+          </span>
+          <button class="button continue">Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Success modal start -->
-
-  Thanks for your support!
-  Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
-  an email once our campaign is completed.
-  Got it!
-
-  <!-- Success modal end -->
+  <div class="modal success" id="successModal">
+    <div class="modal-content">
+      <img src="./images/icon-check.svg" alt="success">
+      <h1>Thanks for your support!</h1>
+      <p>
+        Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
+        an email once our campaign is completed.
+      </p>
+      <button class="button close">Got it!</button>
+    </div>
+  </div>
   <script src="index.js"></script>
 </body>
 
