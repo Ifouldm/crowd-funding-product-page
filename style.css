@@ -16,12 +16,6 @@ body {
     max-width: 1440px;
 }
 
-@media only screen and (max-width: 600px) {
-    body {
-        background-image: url('./images/image-hero-mobile.jpg');
-    }
-}
-
 .content {
     display: flex;
     flex-direction: column;
@@ -29,10 +23,14 @@ body {
 }
 
 .navbar {
-    padding: 2rem 10%;
+    padding: 3.25rem 10rem;
     display: flex;
     justify-content: space-between;
     margin-bottom: 200px;
+}
+
+.nav-item.hamburger {
+    display: none;
 }
 
 .navbarlinks {
@@ -40,6 +38,8 @@ body {
 }
 
 .navbarlinks a {
+    font-size: 0.875rem;
+    font-weight: 500;
     color: white;
     text-decoration: none;
     margin: 1rem;
@@ -51,7 +51,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    padding: 3.5rem 3rem;
     background-color: white;
     border-radius: 0.4rem;
     width: 50%;
@@ -68,7 +68,6 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 1rem;
 }
 
 .col {
@@ -83,25 +82,32 @@ body {
 }
 
 h1 {
-    font-size: 24px;
     font-weight: 700;
 }
 
 h2 {
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 700;
     color: var(--moderate-cyan);
 }
+
+h3 {}
 
 h4 {
     color: var(--dark-gray);
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 p {
+    font-size: 1.2rem;
     line-height: 1.5;
     color: var(--dark-gray);
     font-weight: 500;
+}
+
+p.indent {
+    margin-left: 4rem;
 }
 
 .word-group {
@@ -116,12 +122,13 @@ p {
 }
 
 .button {
+    height: 3.5rem;
     border: 0px;
     border-radius: 3rem;
     padding: 0.5rem 1.5rem;
     background-color: var(--moderate-cyan);
     color: white;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .button:hover {
@@ -136,7 +143,7 @@ p {
 .inner-block {
     border: 2px solid var(--light-gray);
     margin: 1rem 0;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 0.5rem;
 }
 
@@ -149,7 +156,6 @@ p {
 }
 
 .button.toggle {
-    padding-left: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -158,8 +164,8 @@ p {
 }
 
 .toggle-icon {
-    margin: -0.5rem -1.5rem;
-    height: 32px;
+    margin: -0.5rem 0.5rem -0.5rem -1.5rem;
+    height: 3.5rem;
 }
 
 .button.toggle.on {
@@ -173,14 +179,19 @@ p {
 .button.value {
     border: 2px solid var(--light-gray);
     background-color: white;
-    color: black;
+    color: var(--dark-gray);
+}
+
+.button.value>input {
+    border: 0;
+    font-weight: 700;
 }
 
 .progress {
     position: relative;
     width: 100%;
-    height: 10px;
-    border-radius: 5px;
+    height: 0.875rem;
+    border-radius: 0.5rem;
     background-color: var(--light-gray);
 }
 
@@ -188,8 +199,8 @@ p {
     position: absolute;
     content: "";
     width: 89%;
-    height: 10px;
-    border-radius: 5px;
+    height: 0.875rem;
+    border-radius: 0.5rem;
     background-color: var(--moderate-cyan);
 }
 
@@ -203,10 +214,12 @@ p {
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.4);
     overflow: auto;
+    font-size: 0.8;
 }
 
 .modal-content {
-    margin: 0 auto;
+    position: relative;
+    margin: 10% auto auto auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -216,19 +229,34 @@ p {
     width: 50%;
 }
 
+.x {
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+}
+
 .radio {
-    display: block;
     width: 20px;
     height: 20px;
-    margin: 1rem;
     border: 2px solid var(--dark-gray);
     border-radius: 50%;
     background-color: white;
 }
 
 .radio.selected {
-    border: 2px solid var(--dark-cyan);
-    background-color: var(--dark-cyan);
+    border: 2px solid var(--moderate-cyan);
+    position: relative;
+}
+
+.radio.selected::after {
+    position: absolute;
+    content: "";
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    top: 15%;
+    left: 15%;
+    background-color: var(--moderate-cyan);
 }
 
 .attribution {
@@ -236,6 +264,60 @@ p {
     text-align: center;
 }
 
+.pledge {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-top: 2px solid var(--light-gray);
+    padding-top: 1rem;
+}
+
+.pledge.selected {
+    display: flex;
+}
+
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-size: contain;
+        background-image: url('./images/image-hero-mobile.jpg');
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar {
+        padding: 1rem;
+    }
+
+    .navbarlinks {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .navbarlinks a {
+        font-size: 1.2rem;
+        color: black;
+    }
+
+    .block {
+        width: 60%;
+    }
+
+    .modal-content {
+        width: 70%;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
 }

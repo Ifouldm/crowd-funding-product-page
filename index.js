@@ -7,14 +7,36 @@ const continueButtons = document.getElementsByClassName('continue');
 const modals = document.getElementsByClassName('modal');
 const selectionRadios = document.getElementsByClassName('radio');
 const innerBlocks = document.getElementsByClassName('inner-block');
+const pledges = document.getElementsByClassName('pledge');
+const hamburger = document.getElementById('menuIcon');
+const navbarlinks = document.getElementsByClassName('navbarlinks')[0];
+
+// Hamburger Menu
+hamburger.addEventListener('click', () => {
+    // Menu is open
+    if (hamburger.getAttribute('src') === './images/icon-close-menu.svg') {
+        hamburger.setAttribute('src', './images/icon-hamburger.svg');
+        navbarlinks.style.display = 'none';
+    } else {
+        hamburger.setAttribute('src', './images/icon-close-menu.svg');
+        navbarlinks.style.display = 'flex';
+    }
+});
 
 // radio buttons
 Array.prototype.forEach.call(selectionRadios, (radioButton => {
-    radioButton.addEventListener('click', (event) => {
-        selectNone();
-        event.path[2].classList.add('selected');
-        radioButton.classList.add('selected');
-    });
+    const block = radioButton.parentElement.parentElement;
+    if (!block.classList.contains('disabled')){
+        radioButton.addEventListener('click', () => {
+            selectNone();
+            block.classList.add('selected');
+            radioButton.classList.add('selected');
+            const pledge = block.getElementsByClassName('pledge')[0];
+            if (pledge) {
+                pledge.classList.add('selected');
+            }
+        });
+    }
 }));
 
 // onClick for toggle buttons
@@ -49,6 +71,7 @@ function closeAllModals() {
 function selectNone() {
     Array.prototype.forEach.call(innerBlocks, (modal => modal.classList.remove('selected')));
     Array.prototype.forEach.call(selectionRadios, (radioButton => radioButton.classList.remove('selected')));
+    Array.prototype.forEach.call(pledges, (pledgeDiv => pledgeDiv.classList.remove('selected')));
 }
 
 // When the user clicks anywhere outside of the modal, close it
