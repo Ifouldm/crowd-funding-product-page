@@ -5,15 +5,19 @@
     --light-gray: #f4f4f4;
 }
 
-body {
-    margin: 0 auto;
+* {
+    margin: 0;
     padding: 0;
+}
+
+body {
     font-family: 'Commissioner', sans-serif;
     background-color: var(--light-gray);
     background-image: url('./images/image-hero-desktop.jpg');
     background-position: top center;
     background-repeat: no-repeat;
     max-width: 1440px;
+    margin: 0 auto;
 }
 
 .content {
@@ -29,10 +33,6 @@ body {
     margin-bottom: 200px;
 }
 
-.nav-item.hamburger {
-    display: none;
-}
-
 .navbarlinks {
     display: flex;
 }
@@ -42,7 +42,7 @@ body {
     font-weight: 500;
     color: white;
     text-decoration: none;
-    margin: 1rem;
+    padding: 1.5rem;
 }
 
 .block {
@@ -82,10 +82,12 @@ body {
 }
 
 h1 {
+    margin: 1rem 0;
     font-weight: 700;
 }
 
 h2 {
+    margin-bottom: 1rem;
     font-size: 1rem;
     font-weight: 700;
     color: var(--moderate-cyan);
@@ -94,20 +96,22 @@ h2 {
 h3 {}
 
 h4 {
+    margin-bottom: 1rem;
     color: var(--dark-gray);
     font-size: 14px;
     font-weight: 400;
 }
 
 p {
+    margin: 1rem 0;
     font-size: 1.2rem;
     line-height: 1.5;
     color: var(--dark-gray);
     font-weight: 500;
 }
 
-p.indent {
-    margin-left: 4rem;
+.center {
+    text-align: center;
 }
 
 .word-group {
@@ -118,14 +122,19 @@ p.indent {
 
 .block-segement {
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
+.line {
+    height: 50px;
+    border: 1px solid var(--light-gray);
+}
+
 .button {
-    height: 3.5rem;
     border: 0px;
     border-radius: 3rem;
-    padding: 0.5rem 1.5rem;
+    padding: 1rem 1.5rem;
     background-color: var(--moderate-cyan);
     color: white;
     font-weight: 700;
@@ -155,24 +164,27 @@ p.indent {
     border: 2px solid var(--moderate-cyan);
 }
 
-.button.toggle {
+.button.icon {
+    position: relative;
     display: flex;
+    padding-left: 4rem;
     justify-content: space-between;
     align-items: center;
     background-color: var(--light-gray);
     color: var(--dark-gray);
 }
 
-.toggle-icon {
-    margin: -0.5rem 0.5rem -0.5rem -1.5rem;
-    height: 3.5rem;
+.button .icon {
+    left: 0;
+    height: 47px;
+    position: absolute;
 }
 
-.button.toggle.on {
+.button.icon.on {
     color: var(--moderate-cyan);
 }
 
-.button.toggle.on .toggle-icon {
+.button.icon.on .icon {
     content: url('./images/icon-bookmark-on.svg');
 }
 
@@ -180,6 +192,10 @@ p.indent {
     border: 2px solid var(--light-gray);
     background-color: white;
     color: var(--dark-gray);
+}
+
+.button.value:hover {
+    border: 2px solid var(--moderate-cyan);
 }
 
 .button.value>input {
@@ -214,7 +230,7 @@ p.indent {
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.4);
     overflow: auto;
-    font-size: 0.8;
+    font-size: 0.8rem;
 }
 
 .modal-content {
@@ -231,8 +247,13 @@ p.indent {
 
 .x {
     position: absolute;
-    top: 3rem;
-    right: 2rem;
+    top: 1rem;
+    right: 1rem;
+    padding: 1rem;
+}
+
+.x:hover {
+    cursor: pointer;
 }
 
 .radio {
@@ -281,6 +302,10 @@ p.indent {
     color: hsl(228, 45%, 44%);
 }
 
+.hamburger {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
     body {
         background-size: contain;
@@ -292,32 +317,65 @@ p.indent {
     }
 
     .navbar {
-        padding: 1rem;
+        padding: 1.5rem 1rem;
+        flex-wrap: wrap;
     }
 
     .navbarlinks {
+        margin-top: 1rem;
         display: none;
-        flex-direction: column;
         background-color: white;
-        padding: 1rem;
         border-radius: 1rem;
+        width: 100%;
     }
 
     .navbarlinks a {
+        display: block;
         font-size: 1.2rem;
         color: black;
     }
 
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .navbarlinks a:not(:last-child) {
+        border-bottom: 1px solid var(--light-gray);
+    }
+
     .block {
-        width: 60%;
+        padding: 1.5rem;
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+    }
+
+    .line {
+        height: 0;
+        width: 50px;
+    }
+
+    .button.icon {
+        padding-left: 0;
     }
 
     .modal-content {
         width: 70%;
     }
 
+    .row.space-around {
+        flex-direction: column;
+    }
+
     .desktop-only {
         display: none;
     }
-
 }

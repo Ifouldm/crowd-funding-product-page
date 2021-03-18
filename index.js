@@ -1,4 +1,4 @@
-const toggleButtons = document.getElementsByClassName('button toggle');
+const iconButtons = document.getElementsByClassName('button icon');
 const backProjectButton = document.getElementById('backProject');
 const successModal = document.getElementById('successModal');
 const selectionModal = document.getElementById('selectionModal');
@@ -19,7 +19,7 @@ hamburger.addEventListener('click', () => {
         navbarlinks.style.display = 'none';
     } else {
         hamburger.setAttribute('src', './images/icon-close-menu.svg');
-        navbarlinks.style.display = 'flex';
+        navbarlinks.style.display = 'block';
     }
 });
 
@@ -39,8 +39,8 @@ Array.prototype.forEach.call(selectionRadios, (radioButton => {
     }
 }));
 
-// onClick for toggle buttons
-Array.prototype.forEach.call(toggleButtons, (element => {
+// onClick for icon buttons
+Array.prototype.forEach.call(iconButtons, (element => {
     element.addEventListener('click', () => {
         element.classList.toggle('on');
     });
