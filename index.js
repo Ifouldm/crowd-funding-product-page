@@ -25,7 +25,7 @@ hamburger.addEventListener('click', () => {
 
 // radio buttons
 Array.prototype.forEach.call(selectionRadios, (radioButton => {
-    const block = radioButton.parentElement.parentElement;
+    const block = radioButton.parentElement;
     if (!block.classList.contains('disabled')){
         radioButton.addEventListener('click', () => {
             selectNone();
