@@ -9,17 +9,17 @@ This is a solution to the [Crowdfunding product page challenge on Frontend Mento
   - [Overview](#overview)
     - [The challenge](#the-challenge)
     - [Screenshot](#screenshot)
+      - [Desktop](#desktop)
+      - [Mobile](#mobile)
     - [Links](#links)
   - [My process](#my-process)
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
     - [Continued development](#continued-development)
-    - [Useful resources](#useful-resources)
   - [Author](#author)
-  - [Acknowledgments](#acknowledgments)
 
 ## Overview
-
+Build out a crowdfunding product page and get it looking as close to the designs included within the design folder as possible.
 ### The challenge
 
 Users should be able to:
@@ -32,57 +32,60 @@ Users should be able to:
 - [x] Toggle whether or not the product is bookmarked
 
 ### Screenshot
-
-![](./ss-desktop.png)
-
-![](./ss-mobile.png)
+#### Desktop
+![Desktop](./ss-desktop.png)
+#### Mobile
+![Mobile](./ss-mobile.png)
 
 ### Links
 
-- Live Site URL: [http://github.obidex.com/crowd-funding-product-page/](http://github.obidex.com/crowd-funding-product-page/)
+- Live Site URL: http://github.obidex.com/crowd-funding-product-page/
 
 ## My process
+
+- Apply semantic tags to HTML content
+- Add CSS classes to each uniquely styled section
+- Apply typography styles
+- Apply Image & background styles
+- Apply spacing (flexbox, padding, margin etc)
+- Add Modals (and style as above)
+- Add JavaScript functionality for modals
+- Add media query for viewport breakpoints
+- Add JavaScript and CSS for hamburger menu
+- Add JavaScript functionality to increment counters
+- Tweek values until satisfied
 
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
+- CSS media query
 - JavaScript
 - Flexbox
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+Expanding on the previous challenge this was a useful exercise in layouts spacing options and responsive design. In addition there are mobile specific elements to this project which look and operate different at different viewport sizes i.e. the hamburger menu:
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+// Mobile Hamburger Menu
+.navbar {
+    padding: 1.5rem 1rem;
+    flex-wrap: wrap;
 }
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+.navbarlinks {
+      margin-top: 1rem;
+      display: none;
+      background-color: white;
+      border-radius: 1rem;
+      width: 100%;
 }
 ```
 
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+There is a lot of functionality and design that could be added to this but I would like to look at some multi-page builds and modular designs such as a dashboard.
 
 ## Author
 
@@ -90,7 +93,4 @@ Use this section to outline areas that you want to continue focusing on in futur
 - Frontend Mentor - [@Ifouldm](https://www.frontendmentor.io/profile/ifouldm)
 - Github - [Ifouldm](https://www.twitter.com/yourusername)
 
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 
