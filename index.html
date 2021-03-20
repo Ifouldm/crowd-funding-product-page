@@ -52,12 +52,12 @@
     <div class="block">
       <div class="row space-around">
         <div class="block-segment">
-          <h1>$89,914</h1>
+          <h1 id="totalAmount">$89,914</h1>
           <h4>of $100,000 backed</h4>
         </div>
         <div class="line"></div>
         <div class="block-segment">
-          <h1>5,007</h1>
+          <h1 id="totalBackers">5,007</h1>
           <h4>total backers</h4>
         </div>
         <div class="line"></div>
@@ -66,7 +66,9 @@
           <h4>days left</h4>
         </div>
       </div>
-      <div class="progress"></div>
+      <div id="progressBar" class="progress">
+        <span class="bar" id="bar" style="width: 89%;"></span>
+      </div>
     </div>
 
     <div class="block">
@@ -93,11 +95,11 @@
         </p>
         <div class="row space-between">
           <span class="word-group">
-            <h1>101</h1>
+            <h1 class="qty">101</h1>
             &nbsp;
             <h4>left</h4>
           </span>
-          <button class="button">Select Reward</button>
+          <button class="button reward">Select Reward</button>
         </div>
       </div>
       <div class="inner-block">
@@ -111,11 +113,11 @@
         </p>
         <div class="row space-between">
           <span class="word-group">
-            <h1>64</h1>
+            <h1 class="qty">64</h1>
             &nbsp;
             <h4>left</h4>
           </span>
-          <button class="button">Select Reward</button>
+          <button class="button reward">Select Reward</button>
         </div>
       </div>
       <div class="inner-block disabled">
@@ -129,11 +131,11 @@
         </p>
         <div class="row space-between">
           <span class="word-group">
-            <h1>0</h1>
+            <h1 class="qty">0</h1>
             &nbsp;
             <h4>left</h4>
           </span>
-          <button class="button disabled">Out of Stock</button>
+          <button class="button reward disabled">Out of Stock</button>
         </div>
       </div>
     </div>
@@ -174,7 +176,7 @@
           <h3>Bamboo Stand</h3>
           <h2>Pledge $25 or more</h2>
           <span class="word-group">
-            <h1>101</h1>
+            <h1 class="qty">101</h1>
             &nbsp;
             <h4>left</h4>
           </span>
@@ -198,7 +200,7 @@
           <h3>Black Edition Stand</h3>
           <h2>Pledge $75 or more</h2>
           <span class="word-group">
-            <h1>64</h1>
+            <h1 class="qty">64</h1>
             &nbsp;
             <h4>left</h4>
           </span>
@@ -222,7 +224,7 @@
           <h3>Mahogany Special Edition</h3>
           <h2>Pledge $200 or more</h2>
           <span class="word-group">
-            <h1>0</h1>
+            <h1 class="qty">0</h1>
             &nbsp;
             <h4>left</h4>
           </span>

@@ -27,8 +27,8 @@ Users should be able to:
 - [x] View the optimal layout depending on their device's screen size
 - [x] See hover states for interactive elements
 - [x] Make a selection of which pledge to make
-- [ ] See an updated progress bar and total money raised based on their pledge total after confirming a pledge
-- [ ] See the number of total backers increment by one after confirming a pledge
+- [x] See an updated progress bar and total money raised based on their pledge total after confirming a pledge
+- [x] See the number of total backers increment by one after confirming a pledge
 - [x] Toggle whether or not the product is bookmarked
 
 ### Screenshot
@@ -85,7 +85,7 @@ Expanding on the previous challenge this was a useful exercise in layouts spacin
 
 ### Continued development
 
-There is a lot of functionality and design that could be added to this but I would like to look at some multi-page builds and modular designs such as a dashboard.
+There is a lot of functionality and design that could be added to this but I would like to look at some multi-page builds and modular designs such as a dashboard. In a real world environment where the data would be dynamic I would use Ids to select the elements in JavaScript for demonstration purposes I have used element indicies which is not ideal.
 
 ## Author
 
